@@ -136,6 +136,8 @@ public class InventoryGrid : MonoBehaviour
 
             image.color = _slotDefaultColor;
         }
+
+        _highlightedSlots.Clear();
     }
 
     public GameObject[,] GetSlots()

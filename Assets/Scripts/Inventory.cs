@@ -103,7 +103,7 @@ public class Inventory : MonoBehaviour
 
     public void HighlightSlots(Vector2Int gridCoordinates, Vector2Int itemSize)
     {
-        Color color = new Color(0.214012f, 0.5176471f, 0.1882353f, 0.533333f);
+        Color color;
 
         for (int i = 0; i < itemSize.x; ++i)
         {
@@ -115,6 +115,10 @@ public class Inventory : MonoBehaviour
                 if (_grid[xIndex, yIndex] == 1)
                 {
                     color = new Color(0.5188679f, 0.1884567f, 0.1884567f, 0.533333f);
+                }
+                else
+                {
+                    color = new Color(0.214012f, 0.5176471f, 0.1882353f, 0.533333f);
                 }
 
                 _inventoryGrid.HiglightSlot(xIndex, yIndex, color);

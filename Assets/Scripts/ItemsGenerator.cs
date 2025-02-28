@@ -46,9 +46,11 @@ public class ItemsGenerator : MonoBehaviour
 
     void GenerateItems()
     {
+        int totalItems = _items.Length;
+
         for (int i = 0; i < _itemsToGenerate; ++i)
         {
-            int index = Random.Range(0, _itemsToGenerate);
+            int index = Random.Range(0, totalItems - 1);
 
             GameObject item = Instantiate(_items[index], transform);
             PlaceItems(item);
