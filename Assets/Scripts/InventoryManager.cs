@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    [SerializeField] Vector2Int _size = new Vector2Int(15, 8);
     [SerializeField] GameObject _inventoryGrid;
     [SerializeField] Inventory _inventory;
 
@@ -78,7 +77,9 @@ public class InventoryManager : MonoBehaviour
 
     public Vector2Int GetInventorySize()
     {
-        return _size;
+        Vector2Int size = _inventory.GetInventorySize();
+        
+        return size;
     }
 
     public float GetSlotSize()

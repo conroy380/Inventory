@@ -39,6 +39,11 @@ public class Inventory : MonoBehaviour
         
     }
 
+    public Vector2Int GetInventorySize()
+    {
+        return _inventorySize;
+    }
+
     public InventoryGrid GetInventoryGrid()
     {
         return _inventoryGrid;
